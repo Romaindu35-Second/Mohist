@@ -28,3 +28,7 @@ jobs:
       run: |
         chmod +x ./gradlew
         ./gradlew mohistJar
+    - uses: actions/upload-artifact@v2
+      with:	
+        name: Mohist userdev
+        path: "**/mohist/build/libs/*-userdev.jar"
