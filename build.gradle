@@ -821,7 +821,7 @@ project(':forge') {
         }
     }
 
-    task mohistJar(type: Jar, dependsOn: [genServerBinPatches, 'signUniversalJar']) {
+    task mohistJar(type: Jar, dependsOn: [genServerBinPatches, 'signUniversalJar', "userdevJar", "sourcesJar"]) {
         archiveClassifier = 'server'
         extension = 'jar'
         baseName = 'mohist'
