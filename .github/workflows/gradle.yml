@@ -20,7 +20,11 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Build with Gradle
+    - name: Setup mohist
       run: |
         chmod +x ./gradlew
         ./gradlew setup
+    - name: Generate mohistJar
+      run: |
+        chmod +x ./gradlew
+        ./gradlew mohistJar
