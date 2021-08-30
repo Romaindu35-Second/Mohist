@@ -1036,6 +1036,34 @@ project(':forge') {
                 artifact universalJar
                 artifact userdevJar
                 artifact sourcesJar
+
+                pom {
+                    name = 'mohist'
+                    groupId = 'com.mohistmc'
+                    artifactId = 'mohist'
+                    version = "1.16.5-" + JenkinsNumber()
+                    description = 'Minecraft Forge Hybrid server implementing the Spigot/Bukkit /Paper API, formerly known as Thermos/Cauldron/MCPC+.'
+                    url = 'https://github.com/MohistMC/Mohist'
+
+                    scm {
+                        url = 'https://github.com/MohistMC/Mohist'
+                        connection = 'scm:git:git://github.com/MohistMC/Mohist.git'
+                        developerConnection = 'scm:git:git://github.com/MohistMC/Mohist.git'
+                    }
+
+                    issueManagement {
+                        system = 'github'
+                        url = 'https://github.com/MohistMC/Mohist/issues'
+                    }
+
+                    licenses {
+                        license {
+                            name = 'LGPL 2.1'
+                            url = 'https://github.com/MinecraftForge/MinecraftForge/blob/1.13-pre/LICENSE.txt'
+                            distribution = 'repo'
+                        }
+                    }
+                }
             }
         }
         repositories {
