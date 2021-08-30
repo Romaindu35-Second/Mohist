@@ -27,8 +27,8 @@ jobs:
     - name: Generate mohistJar
       run: |
         chmod +x ./gradlew
-        ./gradlew mohistJar
+        ./gradlew publish
     - uses: actions/upload-artifact@v2
       with:	
-        name: Mohist userdev
-        path: "**/mohist/build/libs/*-userdev.jar"
+        name: Upload maven in artifact
+        path: "**/repo/**"
